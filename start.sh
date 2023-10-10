@@ -22,9 +22,12 @@ systemctl restart lighttpd
 
 # useradd test -p test -m
 useradd $UserName -p $Password -m
+# su test
+su $UserName
+#mkdir /home/test/.vnc
+mkdir /home/$UserName/.vnc
 # echo "123456" | vncpasswd -f > /home/test/.vnc/passwd
 echo $VNCPassword | vncpasswd -f > /home/$UserName/.vnc/passwd
 
 # su test
-su $UserName
 vncserver

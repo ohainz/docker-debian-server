@@ -4,8 +4,6 @@
 
 On Windows install wsl:
 
-
-
 On Linux install docker:
 
 ```sh

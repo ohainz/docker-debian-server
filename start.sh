@@ -1,13 +1,21 @@
 #!/bin/bash
 
-if [ -n $UserName ] then 
-    UserName = "test"
+if [ -z "$UserName" ]
+then
+    echo "UserName is not defined"
+    UserName="test"
 fi
-if [ -n $Password ] then 
-    Password = "test"
+
+if [ -z "$Password" ]
+then
+    echo "Password is not defined"
+    Password="test"
 fi
-if [ -n $VNCPassword ] then 
-    UserName = "123456"
+
+if [ -z "$VNCPassword" ]
+then
+    echo "VNCPassword is not defined"
+    VNCPassword="test"
 fi
 
 systemctl restart lighttpd

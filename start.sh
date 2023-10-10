@@ -1,14 +1,22 @@
 #!/bin/bash
 
-username="serveruser"
-password="123456"
-vncpassword="123456"
+if [ -n $UserName ] then 
+    UserName = "test"
+fi
+if [ -n $Password ] then 
+    Password = "test"
+fi
+if [ -n $VNCPassword ] then 
+    UserName = "123456"
+fi
+
+systemctl restart lighttpd
 
 # useradd test -p test -m
-useradd $username -p $password -m
+useradd $UserName -p $Password -m
 # echo "123456" | vncpasswd -f > /home/test/.vnc/passwd
-echo $vncpassword | vncpasswd -f > /home/$username/.vnc/passwd
+echo $VNCPassword | vncpasswd -f > /home/$UserName/.vnc/passwd
 
 # su test
-su $username
+su $UserName
 vncserver

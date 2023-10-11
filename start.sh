@@ -41,12 +41,9 @@ echo "Change mod of .vnc/passwd file"
 # chmod 0600 /home/test/.vnc/passwd
 chmod 0600 /home/$UserName/.vnc/passwd
 
-echo "Switch to user $UserName"
-# su test
-su $UserName
-
-echo "Start VNC Server"
-vncserver
+echo "Start VNC Server for user $UserName"
+# runuser -l  test -c 'vncserver'
+runuser -l  $UserName -c 'vncserver'
 
 
 

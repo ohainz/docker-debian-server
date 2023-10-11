@@ -1,14 +1,19 @@
 # Server
 
-## Preparation
+This repository contains a docker file based on a debian slim image. It tries to start a vnc server session on a xfce4 desktop. To have there preinstalled applications. Currently this did not work. For example the browser chromium did not start.
 
-On Windows install wsl:
+## Preparation
 
 On Linux install docker:
 
 ```sh
 sudo apt update
-sudo apt update 
+sudo apt upgrade -y
+sudo apt install git
+sudo apt install docker docker-compose
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 ```
 
 ## Commands

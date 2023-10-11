@@ -1,7 +1,8 @@
 #!/bin/bash
 
-dpkg-reconfigure -f noninteractive tzdata
 apt update && apt upgrade -y && apt install sudo locales --yes
+dpkg-reconfigure -f noninteractive tzdata
+apt update && apt upgrade -y
 apt install apt-utils -y
 apt update && apt upgrade -y
 

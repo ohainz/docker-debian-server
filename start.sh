@@ -45,6 +45,7 @@ echo "Start VNC Server for user $UserName"
 # runuser -l  test -c 'vncserver'
 runuser -l  $UserName -c 'vncserver'
 
-
+echo "Wait infinity"
+sleep infinity
 
 

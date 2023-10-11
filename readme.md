@@ -16,6 +16,7 @@ sudo apt update
 ```sh
 docker build --no-cache -t debian-server:1.0.0 -f dockerfile .
 docker run -p 1180:80 -p 15901:5901 -td debian-server:1.0.0
+docker run -p 1180:80 -p 15901:5901 -it debian-server:1.0.0
 docker ps
 docker exec -it $CONTAINER_ID /bin/bash
 ```

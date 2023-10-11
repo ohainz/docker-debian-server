@@ -11,6 +11,7 @@ apt install lighttpd -y
 DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies -y
 apt install tightvncserver -y
 apt install dbus-x11 -y
+apt install chromium -y
 apt install systemctl -y
 
 echo "dir-listing.activate = \"enable\"" | tee -a /etc/lighttpd/lighttpd.conf

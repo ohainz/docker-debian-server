@@ -25,6 +25,9 @@ echo "Create user $UserName"
 # useradd test -p test -m
 useradd $UserName -p $Password -m
 
+# chsh -s /bin/bash test
+chsh -s /bin/bash $UserName
+
 echo "Create folder .vnc"
 # mkdir /home/test/.vnc
 mkdir /home/$UserName/.vnc
@@ -47,5 +50,3 @@ runuser -l  $UserName -c 'vncserver'
 
 echo "Wait infinity"
 sleep infinity
-
-

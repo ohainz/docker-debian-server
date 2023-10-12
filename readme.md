@@ -1,6 +1,6 @@
 # Server
 
-This repository contains a docker file based on a debian slim image. It tries to start a vnc server session on a xfce4 desktop. To have there preinstalled applications. Currently this did not work. For example the browser chromium did not start.
+This repository contains a docker file based on a debian slim image. It tries to start a vnc server session on a xfce4 desktop. To have there preinstalled applications. Currently this did not work. For example the browser chromium did not start (chromium --no-sandbox works).
 
 ## Preparation
 

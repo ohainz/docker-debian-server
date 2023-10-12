@@ -7,6 +7,7 @@ apt install apt-utils -y
 apt update && apt upgrade -y
 
 apt install nano -y
+apt install xmlstarlet -y
 apt install lighttpd -y
 DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies -y
 apt install tightvncserver -y

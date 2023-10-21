@@ -9,7 +9,7 @@ apt update && apt upgrade -y
 apt install nano -y
 apt install xmlstarlet -y
 apt install lighttpd -y
-DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies -y
+DEBIAN_FRONTEND=noninteractive apt-get install lxde-core -y
 apt install tightvncserver -y
 apt install dbus-x11 -y
 apt install chromium -y

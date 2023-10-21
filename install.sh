@@ -24,20 +24,20 @@ echo "--- install lighttpd ---"
 apt -yq install lighttpd -y
 
 echo "--------------------------------------------------------------------------------" 
-echo "--- install lxde ---" 
-apt -yq install lxde -y
+echo "--- systemctl ---" 
+apt -yq install systemctl -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- install tightvncserver ---" 
 apt -yq install tightvncserver -y
 
 echo "--------------------------------------------------------------------------------" 
-echo "--- install chromium ---" 
-apt -yq install chromium -y
+echo "--- install lxde ---" 
+apt -yq install lxde -y
 
 echo "--------------------------------------------------------------------------------" 
-echo "--- systemctl ---" 
-apt -yq install systemctl -y
+echo "--- install chromium ---" 
+apt -yq install chromium -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- Configure x11 ---" 
@@ -50,4 +50,7 @@ echo "dir-listing.encoding = \"utf-8\"" | tee -a /etc/lighttpd/lighttpd.conf
 
 export DEBIAN_FRONTEND=
 systemctl restart lighttpd
+dbus-launch
+startlxde
+
 

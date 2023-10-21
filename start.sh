@@ -18,6 +18,17 @@ then
     VNCPassword="test"
 fi
 
+export DEBIAN_FRONTEND=noninteractive
+apt -qq update && apt -qq upgrade -y
+echo "--------------------------------------------------------------------------------" 
+echo "--- install systemctl ---" 
+apt -yq install systemctl -y
+
+echo "--------------------------------------------------------------------------------" 
+echo "--- install lxde ---" 
+apt -yq install lxde -y
+export DEBIAN_FRONTEND=
+
 echo "Restart lighttpd"
 systemctl restart lighttpd
 

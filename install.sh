@@ -40,14 +40,6 @@ echo "--- install chromium ---"
 apt -yq install chromium -y
 
 echo "--------------------------------------------------------------------------------" 
-echo "--- install systemctl 2nd call seem to be needed ---" 
-apt -yq install systemctl -y
-
-echo "--------------------------------------------------------------------------------" 
-echo "--- install lxde 2nd call seem to be needed ---" 
-apt -yq install lxde -y
-
-echo "--------------------------------------------------------------------------------" 
 echo "--- Configure x11 ---" 
 echo "allowed_users = anybody" | tee -a /etc/X11/Xwrapper.config
 
@@ -57,8 +49,5 @@ echo "dir-listing.activate = \"enable\"" | tee -a /etc/lighttpd/lighttpd.conf
 echo "dir-listing.encoding = \"utf-8\"" | tee -a /etc/lighttpd/lighttpd.conf
 
 export DEBIAN_FRONTEND=
-systemctl restart lighttpd
-dbus-launch
-startlxde
 
 

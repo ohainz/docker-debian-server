@@ -23,12 +23,8 @@ echo "--- install lighttpd ---"
 apt -qq install lighttpd -y
 
 echo "--------------------------------------------------------------------------------" 
-echo "--- install lxde-core ---" 
-apt -qq install lxde-core -y
-
-echo "--------------------------------------------------------------------------------" 
 echo "--- install lxde ---" 
-apt -qq install lxde -y
+DEBIAN_FRONTEND=noninteractive apt -yq install lxde -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- install tightvncserver ---" 

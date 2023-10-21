@@ -16,16 +16,16 @@ echo "--- install xmlstarlet ---"
 apt -yq install xmlstarlet -y
 
 echo "--------------------------------------------------------------------------------" 
+echo "--- systemctl ---" 
+apt -yq install systemctl -y
+
+echo "--------------------------------------------------------------------------------" 
 echo "--- install dbus-x11 ---" 
 apt -yq install dbus-x11 -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- install lighttpd ---" 
 apt -yq install lighttpd -y
-
-echo "--------------------------------------------------------------------------------" 
-echo "--- systemctl ---" 
-apt -yq install systemctl -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- install tightvncserver ---" 
@@ -38,6 +38,14 @@ apt -yq install lxde -y
 echo "--------------------------------------------------------------------------------" 
 echo "--- install chromium ---" 
 apt -yq install chromium -y
+
+echo "--------------------------------------------------------------------------------" 
+echo "--- install systemctl 2nd call seem to be needed ---" 
+apt -yq install systemctl -y
+
+echo "--------------------------------------------------------------------------------" 
+echo "--- install lxde 2nd call seem to be needed ---" 
+apt -yq install lxde -y
 
 echo "--------------------------------------------------------------------------------" 
 echo "--- Configure x11 ---" 

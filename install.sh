@@ -1,37 +1,37 @@
 #!/bin/bash
 
-apt update -qq && apt upgrade -y -qq && apt install sudo locales --yes
+apt -qq update && apt -qq upgrade -y && apt install sudo locales --yes
 dpkg-reconfigure -f noninteractive tzdata
-apt update && apt upgrade -y -qq
-apt install apt-utils -y -qq
-apt update && apt upgrade -y -qq
+apt -qq update && apt -qq upgrade -y
+apt -qq install apt-utils -y
+apt -qq update && apt -qq upgrade -y
 
 echo "--- install nano ---" 
-apt install nano -y -qq 
+apt -qq install nano -y 
 
 echo "--- install xmlstarlet ---" 
-apt install xmlstarlet -y -qq
+apt -qq install xmlstarlet -y
 
 echo "--- install dbus-x11 ---" 
-apt install dbus-x11 -y -qq
+apt -qq install dbus-x11 -y
 
 echo "--- install lighttpd ---" 
-apt install lighttpd -y -qq
+apt -qq install lighttpd -y
 
 echo "--- install lxde-core ---" 
-apt install lxde-core -y -qq
+apt -qq install lxde-core -y
 
 echo "--- install lxde ---" 
-apt install lxde -y -qq
+apt -qq install lxde -y
 
 echo "--- install tightvncserver ---" 
-apt install tightvncserver -y -qq
+apt -qq install tightvncserver -y
 
 echo "--- install chromium ---" 
-apt install chromium -y -qq
+apt -qq install chromium -y
 
 echo "--- systemctl ---" 
-apt install systemctl -y -qq
+apt -qq install systemctl -y
 
 echo "--- Configure x11 ---" 
 echo "allowed_users = anybody" | tee -a /etc/X11/Xwrapper.config

@@ -21,6 +21,9 @@ fi
 echo "Restart lighttpd"
 systemctl restart lighttpd
 
+dbus-launch
+startlxde
+
 echo "Create user $UserName"
 # useradd test -p test -m
 useradd $UserName -p $Password -m

@@ -26,6 +26,16 @@ docker ps
 docker exec -it $CONTAINER_ID /bin/bash
 ```
 
+You can kill the virtual desktop with this command in the bash of the docker image.
+
+```sh
+# after docker exec -it $CONTAINER_ID /bin/bash
+# Stop the virtual desktop
+runuser -l  $UserName -c 'vncserver -kill :1'
+# Start the virtual desktop again
+runuser -l  $UserName -c 'vncserver'
+```
+
 ## Links
 
 - [Create a Debian Container in Docker](https://jolthgs.wordpress.com/2019/09/25/create-a-debian-container-in-docker-for-development/)

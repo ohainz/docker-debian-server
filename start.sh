@@ -22,7 +22,6 @@ echo "Restart lighttpd"
 systemctl restart lighttpd
 
 dbus-launch
-startlxde
 
 echo "Create user $UserName"
 # useradd test -p test -m
@@ -46,6 +45,9 @@ chown -R $UserName:$UserName /home/$UserName/.vnc
 echo "Change mod of .vnc/passwd file"
 # chmod 0600 /home/test/.vnc/passwd
 chmod 0600 /home/$UserName/.vnc/passwd
+
+echo "Start startlxde"
+startlxde
 
 echo "Start VNC Server for user $UserName"
 # runuser -l  test -c 'vncserver'

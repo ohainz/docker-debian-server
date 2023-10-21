@@ -1,6 +1,6 @@
 # Server
 
-This repository contains a docker file based on a debian slim image. It tries to start a vnc server session on a xfce4 desktop. To have there preinstalled applications. Currently this did not work. For example the browser chromium did not start (chromium --no-sandbox works).
+This repository contains a docker file based on a debian slim image. It tries to start a vnc server session on a lxde desktop. To have there preinstalled applications. Currently this did not work. For example the browser chromium did not start (chromium --no-sandbox works).
 
 ## Preparation
 
@@ -29,3 +29,4 @@ docker exec -it $CONTAINER_ID /bin/bash
 ## Links
 
 - [Create a Debian Container in Docker](https://jolthgs.wordpress.com/2019/09/25/create-a-debian-container-in-docker-for-development/)
+- [Install LXDE](https://wiki.debian.org/de/LXDE#Installation)
